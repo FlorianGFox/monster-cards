@@ -8,3 +8,7 @@ abstract class Failure extends Equatable {
 
   Failure([this.properties = const <dynamic>[]]);
 }
+
+class UnexpectedFailure extends Failure {}
+
+class FileSystemFailure extends Failure {}

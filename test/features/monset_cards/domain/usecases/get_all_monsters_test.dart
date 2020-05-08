@@ -19,14 +19,16 @@ void main() {
 
   final tMonsters = [Monster(name: 'Test Monster')];
 
-  test('Returns monster from repository when called.', () async {
-    //arrange
-    when(mockMonsterRepository.getAllMonsters())
-        .thenAnswer((_) async => Right(tMonsters));
-    //act
-    var result = await usecase(NoParams());
-    //assert
-    verify(mockMonsterRepository.getAllMonsters());
-    expect(result, Right(tMonsters));
+  group('call', () {
+    test('Returns monster from repository when called.', () async {
+      //arrange
+      when(mockMonsterRepository.getAllMonsters())
+          .thenAnswer((_) async => Right(tMonsters));
+      //act
+      final result = await usecase(NoParams());
+      //assert
+      verify(mockMonsterRepository.getAllMonsters());
+      expect(result, Right(tMonsters));
+    });
   });
 }

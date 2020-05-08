@@ -1,5 +1,5 @@
-import 'package:monster_cards/features/monster_cards/domain/entities/monster.dart';
+import '../../domain/entities/monster.dart';
 
 abstract class LocalDataSource {
-  List<Monster> getAllMonsters();
+  Future<List<Monster>> getAllMonsters();
 }

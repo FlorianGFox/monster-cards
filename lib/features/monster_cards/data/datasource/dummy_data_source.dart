@@ -1,8 +1,8 @@
-import 'package:monster_cards/features/monster_cards/data/datasource/local_data_source.dart';
-import 'package:monster_cards/features/monster_cards/domain/entities/ability.dart';
-import 'package:monster_cards/features/monster_cards/domain/entities/attribute.dart';
-import 'package:monster_cards/features/monster_cards/domain/entities/monster.dart';
-import 'package:monster_cards/features/monster_cards/domain/entities/skill.dart';
+import '../../domain/entities/ability.dart';
+import '../../domain/entities/attribute.dart';
+import '../../domain/entities/monster.dart';
+import '../../domain/entities/skill.dart';
+import 'local_data_source.dart';
 
 class DummyDataSource implements LocalDataSource {
   final List<Monster> monsters = [
@@ -83,7 +83,7 @@ class DummyDataSource implements LocalDataSource {
   ];
 
   @override
-  List<Monster> getAllMonsters() {
-    return monsters;
+  Future<List<Monster>> getAllMonsters() {
+    return Future.value(monsters);
   }
 }
