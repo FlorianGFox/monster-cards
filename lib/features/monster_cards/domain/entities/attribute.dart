@@ -1,10 +1,9 @@
 import 'package:equatable/equatable.dart';
 import 'package:monster_cards/core/enum/enum.dart';
-import 'package:monster_cards/features/monster_cards/domain/entities/dice.dart';
 
 class Attribute extends Equatable {
   final AttributeType name;
-  final DiceType value;
+  final String value;
 
   Attribute({this.name, this.value});
 
