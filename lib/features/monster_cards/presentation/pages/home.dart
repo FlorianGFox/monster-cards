@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/gradient_app_bar.dart';
+import '../widgets/home_body.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -9,6 +10,7 @@ class Home extends StatelessWidget {
       body: Column(
         children: <Widget>[
           GradientAppBar(title: "Monster Cards"),
+          HomeBody(),
         ],
       ),
     );
