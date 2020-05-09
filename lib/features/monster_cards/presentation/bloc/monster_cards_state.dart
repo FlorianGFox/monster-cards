@@ -14,6 +14,15 @@ class Loading extends MonsterCardsState {
   List<Object> get props => [];
 }
 
+class Loaded extends MonsterCardsState {
+  final List<Monster> monsters;
+
+  Loaded(this.monsters);
+
+  @override
+  List<Object> get props => [];
+}
+
 class Error extends MonsterCardsState {
   @override
   List<Object> get props => [];
