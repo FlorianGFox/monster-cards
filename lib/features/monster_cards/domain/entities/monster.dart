@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/foundation.dart';
 
 import 'ability.dart';
 import 'attribute.dart';
@@ -16,19 +17,21 @@ class Monster extends Equatable {
   final int toughness;
   final List<String> edges;
   final List<Ability> abilities;
+  final String imagePath;
 
   Monster({
-    this.group,
-    this.name,
-    this.wildcard,
-    this.description,
-    this.attributes,
-    this.skills,
-    this.pace,
-    this.parry,
-    this.toughness,
-    this.edges,
-    this.abilities,
+    this.group = '',
+    @required this.name,
+    this.wildcard = false,
+    this.description = '',
+    @required this.attributes,
+    this.skills = const [],
+    this.pace = 6,
+    @required this.parry,
+    @required this.toughness,
+    this.edges = const [],
+    this.abilities = const [],
+    this.imagePath = '',
   });
 
   @override

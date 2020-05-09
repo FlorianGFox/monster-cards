@@ -17,7 +17,9 @@ void main() {
     usecase = GetAllMonsters(mockMonsterRepository);
   });
 
-  final tMonsters = [Monster(name: 'Test Monster')];
+  final tMonsters = [
+    Monster(name: 'Test Monster', parry: 2, toughness: 2, attributes: [])
+  ];
 
   group('call', () {
     test('Returns monster from repository when called.', () async {
