@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'features/monster_cards/presentation/pages/home.dart';
 import 'injection_container.dart' as dependencyInjection;
 
 void main() {
@@ -13,9 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: Scaffold(
-        body: Text("hello"),
-      ),
+      home: Home(),
     );
   }
 }
