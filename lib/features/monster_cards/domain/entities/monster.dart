@@ -5,6 +5,10 @@ import 'ability.dart';
 import 'attribute.dart';
 import 'skill.dart';
 
+export 'ability.dart';
+export 'attribute.dart';
+export 'skill.dart';
+
 class Monster extends Equatable {
   final String group;
   final String name;
