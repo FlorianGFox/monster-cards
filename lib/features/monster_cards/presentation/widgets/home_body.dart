@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../domain/entities/monster.dart';
 
+import '../../../../core/styles/foxling_colors.dart';
+import '../../domain/entities/monster.dart';
 import 'monster_row.dart';
 
 class HomeBody extends StatelessWidget {
@@ -10,7 +11,12 @@ class HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return buildRows();
+    return Expanded(
+      child: Container(
+        color: FoxlingColors.lightGrey,
+        child: buildRows(),
+      ),
+    );
   }
 
   Widget buildRows() {
