@@ -3,13 +3,14 @@ import 'package:flutter/foundation.dart';
 
 import 'ability.dart';
 import 'attribute.dart';
+import 'monster_card_stats.dart';
 import 'skill.dart';
 
 export 'ability.dart';
 export 'attribute.dart';
 export 'skill.dart';
 
-class Monster extends Equatable {
+class Monster extends Equatable implements MonsterCardStats {
   final String group;
   final String name;
   final bool wildcard;
@@ -22,6 +23,9 @@ class Monster extends Equatable {
   final List<String> edges;
   final List<Ability> abilities;
   final String imagePath;
+  final String dmg;
+  final Skill fighting;
+  final Skill notice;
 
   Monster({
     this.group = '',
@@ -36,6 +40,9 @@ class Monster extends Equatable {
     this.edges = const [],
     this.abilities = const [],
     this.imagePath = '',
+    @required this.dmg,
+    @required this.fighting,
+    @required this.notice,
   });
 
   @override

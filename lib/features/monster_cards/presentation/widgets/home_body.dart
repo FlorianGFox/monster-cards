@@ -36,6 +36,8 @@ Monster monster = Monster(
     Skill(name: 'Notice', value: 'd8'),
     Skill(name: 'Stealth', value: 'd8'),
   ],
+  notice: Skill(name: 'Notice', value: 'd8'),
+  fighting: Skill(name: 'Fighting', value: 'd8'),
   pace: 8,
   parry: 6,
   toughness: 10,
@@ -53,5 +55,6 @@ Monster monster = Monster(
                         tall and weigh over 1,000 pounds.''',
     ),
   ],
+  dmg: 'd12+d6+2',
   imagePath: 'assets/images/bear.jpg',
 );

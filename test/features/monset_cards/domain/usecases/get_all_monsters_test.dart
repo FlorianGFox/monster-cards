@@ -18,7 +18,15 @@ void main() {
   });
 
   final tMonsters = [
-    Monster(name: 'Test Monster', parry: 2, toughness: 2, attributes: [])
+    Monster(
+      name: 'Test Monster',
+      parry: 2,
+      toughness: 2,
+      attributes: [],
+      fighting: null,
+      notice: null,
+      dmg: null,
+    )
   ];
 
   group('call', () {
