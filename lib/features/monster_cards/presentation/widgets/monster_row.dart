@@ -4,7 +4,6 @@ import '../../../../core/styles/foxling_colors.dart';
 import '../../../../core/styles/poppins_text_style.dart';
 import '../../domain/entities/monster.dart';
 import '../../domain/entities/monster_card_stats.dart';
-import 'home_body.dart';
 
 class MonsterRow extends StatelessWidget {
   final MonsterCardStats monster;
@@ -24,8 +23,8 @@ class MonsterRow extends StatelessWidget {
       ),
       child: Stack(
         children: <Widget>[
-          MonsterCard(),
-          MonsterThumbnail(),
+          MonsterCard(monster),
+          MonsterThumbnail(monster),
         ],
       ),
     );
@@ -33,6 +32,10 @@ class MonsterRow extends StatelessWidget {
 }
 
 class MonsterThumbnail extends StatelessWidget {
+  final MonsterCardStats monster;
+
+  const MonsterThumbnail(this.monster, {Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -48,6 +51,10 @@ class MonsterThumbnail extends StatelessWidget {
 }
 
 class MonsterCard extends StatelessWidget {
+  final MonsterCardStats monster;
+
+  const MonsterCard(this.monster, {Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -65,7 +72,7 @@ class MonsterCard extends StatelessWidget {
           ),
         ],
       ),
-      child: MonsterCardContent(monster: monster),
+      child: MonsterCardContent(monster),
     );
   }
 }
@@ -73,7 +80,7 @@ class MonsterCard extends StatelessWidget {
 class MonsterCardContent extends StatelessWidget {
   final Monster monster;
 
-  const MonsterCardContent({Key key, this.monster}) : super(key: key);
+  const MonsterCardContent(this.monster, {Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +90,7 @@ class MonsterCardContent extends StatelessWidget {
         children: <Widget>[
           Header(monster.name),
           Seperator(),
-          ImportantStats(),
+          ImportantStats(monster),
         ],
       ),
     );
@@ -114,6 +121,10 @@ class Seperator extends StatelessWidget {
 }
 
 class ImportantStats extends StatelessWidget {
+  final MonsterCardStats monster;
+
+  const ImportantStats(this.monster, {Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Row(

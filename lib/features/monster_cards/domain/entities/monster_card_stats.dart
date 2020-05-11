@@ -13,17 +13,18 @@ class MonsterCardStats extends Equatable {
   final Skill fighting;
   final Skill notice;
   final String dmg;
+  final String imagePath;
 
-  MonsterCardStats({
-    this.name,
-    this.wildcard,
-    this.pace,
-    this.parry,
-    this.toughness,
-    this.fighting,
-    this.notice,
-    this.dmg,
-  });
+  MonsterCardStats(
+      {this.name,
+      this.wildcard,
+      this.pace,
+      this.parry,
+      this.toughness,
+      this.fighting,
+      this.notice,
+      this.dmg,
+      this.imagePath});
 
   @override
   List<Object> get props => [

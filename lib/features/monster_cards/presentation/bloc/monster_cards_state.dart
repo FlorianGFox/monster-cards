@@ -20,7 +20,7 @@ class Loaded extends MonsterCardsState {
   Loaded(this.monsters);
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [monsters];
 }
 
 class Error extends MonsterCardsState {
