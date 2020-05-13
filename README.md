@@ -1,16 +1,12 @@
 # monster_cards
 
-A new Flutter project.
+This is a small sample Flutter project that loads monster stats from a repository. The stats are displayed as a scrollable list of cards with thumbnail. 
+The back-end was implemented fully test-driven.
 
-## Getting Started
+The project uses _getIt_ for dependency injection and _bloc_ for state management.
 
-This project is a starting point for a Flutter application.
+The design was inspired by: https://github.com/sergiandreplace/flutter_planets_tutorial/tree/master
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+![Screenshot](/assets/images/screenshots/screenshot1.png?raw=true "Screenshot")
