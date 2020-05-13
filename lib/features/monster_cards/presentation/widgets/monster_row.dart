@@ -85,8 +85,9 @@ class MonsterCardContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(40.0, 8.0, 8.0, 8.0),
+      margin: EdgeInsets.fromLTRB(75.0, 8.0, 8.0, 8.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Header(monster.name),
           Seperator(),
@@ -132,7 +133,7 @@ class ImportantStats extends StatelessWidget {
       children: <Widget>[
         Expanded(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               ImportantStatText('Fight.: ${monster.fighting.value}'),
               ImportantStatText('Dmg: ${monster.dmg}'),
