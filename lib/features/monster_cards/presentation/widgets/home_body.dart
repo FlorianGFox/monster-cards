@@ -14,17 +14,16 @@ class HomeBody extends StatelessWidget {
     return Expanded(
       child: Container(
         color: FoxlingColors.lightGrey,
-        child: buildRows(),
+        child: _buildRows(),
       ),
     );
   }
 
-  Widget buildRows() {
-    return Column(
-      children: <Widget>[
-        for (var i = 0; i < monsters.length; i++)
-          MonsterRow(monster: monsters[i]),
-      ],
+  Widget _buildRows() {
+    return SingleChildScrollView(
+      child: Column(
+        children: monsters.map((m) => MonsterRow(monster: m)).toList(),
+      ),
     );
   }
 }
